@@ -10,7 +10,7 @@ export const products = [
     description: 'Celular medio caro'
   },
   {
-    name: 'Celular poco caro',
+    name: 'Celular Estandar',
     price: 299,
     description: ''
     
