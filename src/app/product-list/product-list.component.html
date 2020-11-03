@@ -1,0 +1,30 @@
+<h2>Products</h2>
+
+
+<div *ngFor="let product of products">
+
+	<h3>
+    <a [title]= "product.name + 'details' " >
+    {{ product.name }}
+	  </a>
+  </h3>
+
+<!-- Si el atributo: descripcion del producto existem lo mostrara en el sitio !-->
+  <p *ngIf="product.description">
+    Descripcion: {{product.description}}
+  </p>
+
+<!-- Evento del click para compartir, su metodo esta en product-list.component.ts !-->   
+  <button (click)="share()"> 
+    Compartir 
+  </button>
+
+<!-- Evento del click para notificar, su metodo esta en product-alerts.component.ts !-->   
+
+<app-product-alerts 
+[product] = "product"
+(notify) = "onNotify()">
+</app-product-alerts>
+
+
+</div>
